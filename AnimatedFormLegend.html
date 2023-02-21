@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+    font:100 16px/1.5 'Open Sans', sans-serif;
+}
+body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #223243;
+    }
+    fieldset{
+  color: #999;
+  border-color: #999;
+  outline-color: #999;
+  margin:1rem;
+  max-width: 50rem;
+}
+legend{
+  color: #666;
+  padding: 0 2rem;
+  margin-left: 1rem;
+  position:relative;
+  top: 2.5rem;
+  transition: color 1s ease, top 0.4s ease, left 1s ease;
+}
+input[type="text"]{
+  font-size: 1rem;
+  line-height: 1rem;
+  padding:0.5rem 1rem;
+  margin: 0.5rem 2rem;
+  width: 20rem;
+}
+legend.above{
+  top: 0;
+  left: -1rem;
+  color: #999;
+}
+input[type="text"]:valid + legend,
+input[type="text"]:focus + legend {
+    top: 0;
+    left: -1rem;
+    color: #999;
+}
+    </style>
+    <form>
+        <fieldset>          
+            <legend>Username</legend>
+          <input type="text" value="" id="username" maxlength="50" tabindex="1" required="required"/>
+          
+        </fieldset>
+    </form>
+</body>
+</html>

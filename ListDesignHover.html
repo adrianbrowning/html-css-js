@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;            
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px
+        }
+        .container .box {
+            position: relative;
+            background-color: #fff;
+            width: 400px;
+            height: 100px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            box-shadow: 10px 10px 15px rgba(0,0,0,0.025);
+        }
+        .container:hover .box:nth-child(1) {
+            transform: translateX(-70px);
+        }
+        .container:hover .box:nth-child(3) {
+            transform: translateX(70px);
+        }
+        .container .box::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background-color: var(--clr);
+            transition: 0.5s ease-in-out;            
+        }
+
+        .container .box:hover::before {
+            width: 100%;            
+        }
+        .container .box .content {
+            position: relative;
+            min-width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;          
+            height: 100%;  
+        }
+        .container .box .content .icon {
+            font-size: 2.5rem;
+            color: var(--clr);
+            transition: 0.5s ease-in-out;
+        }
+        .container .box:hover .content .icon ion-icon {
+            color: #fff;
+        }
+        .container .box .content .text h3 {
+            font-weight: 500;
+            color: var(--clr);
+            transition: 0.5s ease-in-out;
+        }
+        .container .box .content .text p {
+            font-size: 0.9rem;
+            color: #999;
+            transition: 0.5s ease-in-out;
+        }
+        .container .box:hover .content .text h3,
+        .container .box:hover .content .text p {
+            color: #fff;
+        }
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>List & Hover</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="--clr:#fc5f9b;">
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="color-palette-outline"></ion-icon>                  
+                </div>
+                <div class="text">
+                       <h3>Website Desgining</h3> 
+                       <p>5 Projects</p>
+                </div> 
+            </div>
+        </div>
+    
+        <div class="box" style="--clr:#a362ea;">
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="code-slash-outline"></ion-icon>                  
+                </div>
+                <div class="text">
+                       <h3>Website Development</h3> 
+                       <p>3 Projects</p>
+                </div> 
+            </div>
+        </div>
+    
+        <div class="box" style="--clr:#0ed095;">
+            <div class="content">
+                <div class="icon">
+                    <ion-icon name="earth-outline"></ion-icon>                  
+                </div>
+                <div class="text">
+                       <h3>SEO</h3> 
+                       <p>12 Projects</p>
+                </div> 
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
